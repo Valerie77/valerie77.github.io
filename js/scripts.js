@@ -1,4 +1,5 @@
+var element = document.getElementById("test");
 function changeAttr() {
-  #test.SetAttribute("Submit is changed");
+  element.SetAttribute("value","Submit is changed");
 }
-#test.addeventListener("click", changeAttr);
+element.addeventListener("click", changeAttr);
