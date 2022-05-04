@@ -329,7 +329,19 @@ console.log = function(message) {
     console.olog(message);
     $('#debugDiv').append('<p>' + message + '</p>');
 };
-console.error = console.debug = console.info =  console.log
+console.error = console.debug = console.info =  console.log;
+    var log = document.querySelector('#log');
+['log','debug','info','warn','error'].forEach(function (verb) {
+    console[verb] = (function (method, verb, log) {
+        return function () {
+            method.apply(console, arguments);
+            var msg = document.createElement('div');
+            msg.classList.add(verb);
+            msg.textContent = verb + ': ' + Array.prototype.slice.call(arguments).join(' ');
+            log.appendChild(msg);
+        };
+    })(console[verb], verb, log);
+});
 
  </script>
         <!-- Footer-->
