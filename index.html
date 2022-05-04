@@ -304,78 +304,7 @@
                 </div>
             </div>
         </section>
-         <div id="log" onload="loadSite()"></div>
- <div id="logger" class="web_console"></div>
-<script>
-    function loadSite() {
-    if (!console) {
-        console = {};
-    }
-    var old = console.error;
-    var logger = document.getElementById('log');
-    console.error = function (message) {
-        if (typeof message == 'object') {
-            logger.innerHTML += (JSON && JSON.stringify ? JSON.stringify(message) : String(message)) + '<br />';
-        } else {
-            logger.innerHTML += message + '<br />';
-        }
-    }
 
-
-console.error('test');
-    
-    if (typeof console  != "undefined") 
-    if (typeof console.log != 'undefined')
-        console.olog = console.log;
-    else
-        console.olog = function() {};
-
-console.log = function(message) {
-    console.olog(message);
-    $('#debugDiv').append('<p>' + message + '</p>');
-};
-console.error = console.debug = console.info =  console.log;
-    var log = document.querySelector('#log');
-['log','debug','info','warn','error'].forEach(function (verb) {
-    console[verb] = (function (method, verb, log) {
-        return function () {
-            method.apply(console, arguments);
-            var msg = document.createElement('div');
-            msg.classList.add(verb);
-            msg.textContent = verb + ': ' + Array.prototype.slice.call(arguments).join(' ');
-            log.appendChild(msg);
-        };
-    })(console[verb], verb, log);
-});
-
- </script>
- <script type="text/javascript">
-
-        // Overriding console object
-        var console = {};
-
-        // Getting div to insert logs
-        var logger = document.getElementById("logger");
-
-        // Adding log method from our console object
-        console.log = function(text)
-        {
-            var element = document.createElement("div");
-            var txt = document.createTextNode(text);
-
-            element.appendChild(txt);
-            logger.appendChild(element);
-        }
-
-        // testing
-        console.log("Hello World...");
-        console.log("WOW");
-
-        /**
-            console.log prints the message in the page instead browser console, useful to programming and debugging JS using a Android phone
-
-        */
-    </script>
         <!-- Footer-->
         <footer class="py-5 bg-coral">
             <div class="container px-5"><p class="m-0 text-center text-white">Copyright &copy; Taniti 2021</p></div>
