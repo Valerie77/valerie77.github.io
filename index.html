@@ -303,7 +303,7 @@
          <div id="log" onload="loadSite()"></div>
  <div id="logger" class="web_console"></div>
 <script>
-    (function loadSite() {
+    function loadSite() {
     if (!console) {
         console = {};
     }
@@ -316,7 +316,7 @@
             logger.innerHTML += message + '<br />';
         }
     }
-})();
+
 
 console.error('test');
     
