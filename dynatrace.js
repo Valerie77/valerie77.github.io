@@ -1,4 +1,4 @@
-<script type="text/javascript">
+
 /*
  Copyright and licenses see https://www.dynatrace.com/company/trust-center/customers/reports/*/
 (function(){"undefined"!==typeof window&&window.setTimeout&&(window.setTimeout=window.setTimeout);this.dT_&&dT_.prm&&dT_.prm();(function(){function qa(){document.cookie="".concat("__dTCookie","=").concat("1",";SameSite=Lax");var Ua=-1!==document.cookie.indexOf("__dTCookie");document.cookie="".concat("__dTCookie","=").concat("1","; expires=Thu, 01-Jan-1970 00:00:01 GMT");return Ua}function Pa(){return void 0===ib.dialogArguments?navigator.cookieEnabled||qa():qa()}function gb(){var Ua;if(Pa()&&!window.dT_){var Ba=
@@ -69,4 +69,4 @@ wj=Kg.substring(0,Eh),tc=Kg.substring(Eh+1);wj&&tc&&(Jg[wj]=tc)}}oc=Jg}}Fd=void 
 5,Zh.indexOf(".",$g)),10):!1}if(Cf)Pd(Sf,Ma("async"),void 0,void 0,"dtjsagent");else{var dg="".concat("dtjsagent","dw");document.write('<script id="'.concat(dg,'" type="text/javascript" src="').concat(Sf,'">\x3c/script>'));document.getElementById(dg)||Pd(Sf,Ma("async"),void 0,void 0,"dtjsagent")}}V("dtCookie")&&ha("cooO",!0);bf();ha("pVO",!!qd("dt-pVO"));od(ve);Xg=18E5;gh=ab("hvt")||216E5;A(ce,[1]);ni=[];Bh="dtCookie dtLatC rxvt dtAdk dtAdkSettings dtPC".split(" ");if(Ma("cg"))try{Tc(Object.getOwnPropertyDescriptor(Document.prototype,
 "cookie")||Object.getOwnPropertyDescriptor(HTMLDocument.prototype,"cookie"))}catch(Be){}}catch(Be){try{delete Db.dT_}catch(de){Db.dT_=void 0}Pa()&&Db.console.log("JsAgent initCode initialization failed!")}})(!1)})()})();
 
-</script>
+
